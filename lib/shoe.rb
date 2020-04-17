@@ -4,14 +4,20 @@ class Shoe
 
   BRANDS = []
 
-  def cobble
-    self.condition = "new"
-    puts "Your shoe is as good as new!"
+  def initialize(brand)
+    @brand = brand
+    BRANDS << brand
   end
 
   # create the writer for brand and add the logic for the class constant
   def brand=(brand)
     @brand = brand
-    BRANDS << brand
+    #BRANDS << brand
   end
+
+  def cobble
+    self.condition = "new"
+    puts "Your shoe is as good as new!"
+  end
+
 end
